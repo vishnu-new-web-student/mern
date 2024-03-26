@@ -4,10 +4,14 @@ import dotenv from 'dotenv'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server:{
+    host: true,
+    port: 80,
+  },
   
   plugins: [react()],
   define:{
     'process.env.VITE' :JSON.stringify(process.env.VITE_KEY)
-  }
+  },
   
-})
+});
